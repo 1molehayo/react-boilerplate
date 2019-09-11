@@ -1,0 +1,15 @@
+.nav {
+  &-item {
+    margin: 0 0.8rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-link {
+    &.active {
+      color: color(primary) !important;
+    }
+  }
+}
