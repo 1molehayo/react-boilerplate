@@ -1,16 +1,15 @@
-// vendors
-@import 'vendors/bootstrap';
+// global
+@import 'global/variables';
+@import 'global/functions';
+@import 'global/mixins';
 
 // base
 @import 'base/resets';
-@import 'base/variables';
 @import 'base/typography';
 @import 'base/base';
 
-// helpers
-@import 'helpers/functions';
-@import 'helpers/mixins';
-@import 'helpers/utility';
+// vendors
+@import 'vendors/bootstrap';
 
 // components
 @import 'components/buttons';
@@ -30,3 +29,6 @@
 // themes
 @import 'themes/default';
 @import 'themes/dark-mode';
+
+// helpers
+@import 'helpers/utility';
