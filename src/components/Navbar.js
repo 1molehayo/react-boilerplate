@@ -1,48 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
   Nav,
+  Navbar,
+  NavDropdown,
   NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
+  NavbarBrand,
+  Container
+} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
-  const [isOpen, setIsOpen] = useState();
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <Navbar className="nav" color="light" fixed="true" light expand="md">
-      <div className="container">
+    <Navbar className="nav" color="light" sticky="top" bg="light" expand="md">
+      <Container>
         <NavbarBrand href="/">Logo</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ml-auto">
             <NavItem>
               <NavLink className="nav-link" exact to="/">
                 Home
               </NavLink>
             </NavItem>
 
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Dropdown
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Dropdown1</DropdownItem>
-                <DropdownItem>Dropdown2</DropdownItem>
-                <DropdownItem>Dropdown3</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavDropdown title="Dropdown" id="nav-dropdown">
+              <NavDropdown.Item>Dropdown1</NavDropdown.Item>
+              <NavDropdown.Item>Dropdown2</NavDropdown.Item>
+              <NavDropdown.Item>Dropdown3</NavDropdown.Item>
+            </NavDropdown>
 
             <NavItem>
               <NavLink className="nav-link" to="/page">
@@ -50,8 +36,8 @@ export const Navigation = () => {
               </NavLink>
             </NavItem>
           </Nav>
-        </Collapse>
-      </div>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };

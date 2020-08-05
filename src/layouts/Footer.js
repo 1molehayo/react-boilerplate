@@ -7,8 +7,16 @@ export const Footer = () => (
       <p className="paragraph footer__title">Footer</p>
       <div className="copyright">
         &copy; Copyright {new Date().getFullYear()}{' '}
-        <Link className="copyright__link" to="http:s//olusegunomilabu.com">
-          Onemole
+        <Link className="copyright__link" to="https://olusegunomilabu.com">
+          Onemole{' '}
+        </Link>
+        Powered by
+        <Link
+          className="copyright__link"
+          to="https://github.com/1molehayo/react-boilerplate"
+        >
+          {' '}
+          React boilerplate
         </Link>
       </div>
     </div>

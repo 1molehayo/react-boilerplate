@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid color(black);
+  padding: 0.8rem 1.5rem;
+  background-color: color(black);
+  vertical-align: middle;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: color(white);
+  transition: color 0.3s;
+  transition-property: color, background-color;
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: color(black);
+  }
+}
