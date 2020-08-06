@@ -1,8 +1,8 @@
 body {
+  @include font-family(nunito);
+  @include font-size(regular);
+  @include font-weight(regular);
   line-height: normal;
   letter-spacing: normal;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #7a7a7a;
+  color: color(grey);
 }
