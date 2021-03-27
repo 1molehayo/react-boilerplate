@@ -2,18 +2,19 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb-base",
     "prettier",
-    "prettier/@typescript-eslint"
+    "airbnb-base",
+    "plugin:prettier/recommended"
   ],
   "plugins": ["react", "react-hooks"],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 9,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "requireConfigFile": false
   },
   "env": {
     "browser": true,
@@ -33,13 +34,15 @@
       { "name": "NavLink", "linkAttribute": "to" }
     ]
   },
-
   "rules": {
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
     "comma-dangle": 0,
     "linebreak-style": 0,
     "global-require": "off",
     "prefer-spread": "off",
     "arrow-parens": "off",
+    "no-unused-vars": "warn",
     "no-console": 1,
     "no-restricted-syntax": "off",
     "no-plusplus": 0,

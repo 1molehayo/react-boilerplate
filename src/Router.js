@@ -5,9 +5,9 @@ import { Loader } from './components';
 import history from './history';
 
 const Home = lazy(() => import('pages/Home'));
-const Page = lazy(() => import('pages/Page'));
+const Page = lazy(() => import('pages/DefaultPage'));
 
-const Scroll = props => {
+const Scroll = (props) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [props.location]);
@@ -32,7 +32,7 @@ const RouterComponent = () => (
         <Route
           exact
           path="/"
-          render={routeProps => (
+          render={(routeProps) => (
             <Suspense fallback={<Loader show />}>
               <Home {...routeProps} />
             </Suspense>
@@ -42,7 +42,7 @@ const RouterComponent = () => (
         <Route
           exact
           path="/page"
-          render={routeProps => (
+          render={(routeProps) => (
             <Suspense fallback={<Loader show />}>
               <Page {...routeProps} />
             </Suspense>
