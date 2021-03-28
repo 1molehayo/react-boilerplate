@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
-export const PageLayout = props => (
+export const PageLayout = (props) => (
   <>
     <Header />
 
