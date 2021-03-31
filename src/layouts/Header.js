@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigation } from 'components';
 
 export const Header = () => (
-  <header>
+  <header className="header">
     <Navigation />
   </header>
 );

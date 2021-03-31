@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export const Footer = () => (
   <footer className="footer">
@@ -7,17 +6,16 @@ export const Footer = () => (
       <p className="paragraph footer__title">Footer</p>
       <div className="copyright">
         &copy; Copyright {new Date().getFullYear()}{' '}
-        <Link className="copyright__link" to="https://olusegunomilabu.com">
+        <a className="copyright__link" href="https://olusegunomilabu.com">
           Onemole{' '}
-        </Link>
-        Powered by
-        <Link
+        </a>
+        Powered by{' '}
+        <a
           className="copyright__link"
-          to="https://github.com/1molehayo/react-boilerplate"
+          href="https://github.com/1molehayo/react-boilerplate"
         >
-          {' '}
           React boilerplate
-        </Link>
+        </a>
       </div>
     </div>
   </footer>
