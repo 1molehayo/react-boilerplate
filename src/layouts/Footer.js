@@ -7,7 +7,7 @@ export const Footer = () => (
       <div className="copyright">
         &copy; Copyright {new Date().getFullYear()}{' '}
         <a className="copyright__link" href="https://olusegunomilabu.com">
-          Onemole{' '}
+          Olusegun Omilabu{' '}
         </a>
         Powered by{' '}
         <a
