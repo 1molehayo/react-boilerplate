@@ -1,4 +1,4 @@
-# React boilerplate Documentation
+# React Boilerplate Documentation
 
 React with bootstrap boilerplate
 
